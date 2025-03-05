@@ -10,10 +10,11 @@
   <body class="bg-[#E5E5E5]">
     <nav>
       <div
-        class="p-3 px-0 mx-15 flex justify-between items-center text-gray-900 border-b-1 border-gray-300"
+        class="p-3 px-0 mx-4 md:mx-15 flex justify-between items-center text-gray-900 border-b-1 border-gray-300"
       >
         <a href="/home" class="p-2 pl-0 font-bold">Tutorify</a>
-        <div class="flex gap-8 items-center">
+        <!--Nav for desktop-->
+        <div class="gap-4 lg:gap-8 items-center hidden md:flex">
           <a
             href="#"
             class="py-2 hover:underline underline-offset-8 hover:text-orange-400"
@@ -45,7 +46,70 @@
             >Sign Up</a
           >
         </div>
+
+        <!--Hamberger button for mobile-->
+        <div class="md:hidden">
+          <button id="menu-btn" class="p-2 pr-0 focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!--Drop down menu for mobile nav-->
+      <div class="items-center hidden flex flex-col bg-orange-200" id="menu">
+        <a
+          href="#"
+          class="py-2 pt-4 hover:underline underline-offset-8 hover:text-orange-400 active:text-orange-800"
+          >Home</a
+        >
+        <a
+          href="#"
+          class="py-2 hover:underline underline-offset-8 hover:text-orange-400 active:text-orange-800"
+          >Lessons</a
+        >
+        <a
+          href="#"
+          class="py-2 hover:underline underline-offset-8 hover:text-orange-400 active:text-orange-800"
+          >Find Tutors</a
+        >
+        <a
+          href="#"
+          class="py-2 hover:underline underline-offset-8 hover:text-orange-400 active:text-orange-800"
+          >About Us</a
+        >
+        <a
+          href="#"
+          class="py-2 hover:underline underline-offset-8 hover:text-orange-400 active:text-orange-800"
+          >Login</a
+        >
+        <a
+          href="#"
+          class="py-2 pb-4 hover:underline underline-offset-8 hover:text-orange-400 active:text-orange-800"
+          >Sign Up</a
+        >
       </div>
     </nav>
+
+    <!--script for hamberger button-->
+    <script>
+      document
+        .getElementById("menu-btn")
+        .addEventListener("click", function () {
+          document.getElementById("menu").classList.toggle("hidden");
+        });
+    </script>
   </body>
 </html>
